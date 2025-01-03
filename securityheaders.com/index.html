@@ -1,0 +1,170 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+    
+<!-- Mirrored from securityheaders.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Jan 2025 07:15:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <title>Analyse your HTTP response headers</title>
+<link rel="icon" type="image/png" href="images/favicon.ico" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" content="Quickly and easily assess the security of your HTTP response headers" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="security headers, http response headers, check headers, scan headers" />
+<meta name="author" content="Scott Helme" />
+<meta property="og:title" content="Analyse your HTTP response headers" />
+<meta property="og:description" content="Quickly and easily assess the security of your HTTP response headers" />
+<meta property="og:url" content="index.html" />
+<meta property="og:image" content="images/security-headers.png" />
+<meta property="og:type" content="website" />
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:title" content="Analyse your HTTP response headers" />
+<meta property="twitter:description" content="Quickly and easily assess the security of your HTTP response headers" />
+<meta property="twitter:site" content="@securityheaders" />
+<meta property="twitter:creator" content="@scott_helme" />
+<meta property="twitter:img" content="images/security-headers.png" />
+<script src="js/jquery/3.6.4/jquery.min.js"></script>
+<script src="js/skel/2.2.1/skel.min.js"></script>
+<script src="js/skel-layers/2.0.1/skel-layers.min.js"></script>
+<script src="js/jquery.dropotron.min.js"></script>
+<script src="js/init.min3860.js?v=1"></script>
+<noscript>
+	<link rel="stylesheet" href="css/skel/2.2.1/skel.min.css">
+</noscript>
+<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.min.css" /><![endif]-->
+<link rel="stylesheet" href="css/style.min17d3.css?v=1.0.19" />
+<link rel='stylesheet' media='screen and (min-width: 737px)' href='css/style-desktop.mina0a7.css?v=1.0.17' />
+<link rel='stylesheet' media='screen and (min-width: 737px) and (max-width: 1200px)' href='css/style-1000px.min2750.css?v=1.0.16' />
+<link rel='stylesheet' media='screen and (max-width: 736px)' href='css/style-mobile.min0aff.css?v=1.0.18' />
+<meta name="flattr:id" content="4jvyrv">    </head>
+	<body class="homepage" id="top">
+
+			<div id="header" class="default">
+				<div class="container">
+					<div id="logo">
+						<a href="index.html"><img class="sponsor-image" src="images/Probely%20Security%20Headers%20Logo%20-%20Light.svg" alt="The logo of our sponsor, Probely."></a>
+					</div>
+				
+<nav id="nav">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li>
+			<span>About</span>
+			<ul>
+				<li><a href="about/index.html">Who, Why &amp; How</a></li>
+				<li><a href="faq/index.html">FAQ</a></li>
+			</ul>
+		</li>
+        <li>
+            <span>API</span>
+            <ul>
+                <li><a href="api/index.html">API Keys</a></li>
+                <li><a href="api/terms/index.html">Terms</a></li>
+                <li><a href="api/docs/index.html">Docs</a></li>
+            </ul>
+        </li>
+	</ul>
+</nav>					<div id="banner">
+						<header>
+							<h2 id="scan-your-site-now">Scan your site now</h2><br />
+							<form method="get" action="https://securityheaders.com/" name="scan" id="scanForm">
+								<div>
+									<div>
+										<input type="url" name="q" id="q" placeholder="enter address here" autocorrect="off" autocapitalize="off" spellcheck="false" aria-labelledby="scan-your-site-now"
+											   >
+										<input class="button big alt" value="Scan" type="submit" id="scan">
+									</div>
+									<div>
+										<input class="checkbox" type="checkbox" name="hide" id="hide" ><label for="hide"> Hide results</label>
+										<input class="checkbox" type="checkbox" name="followRedirects" id="followRedirects"
+										checked										>
+										<label for="followRedirects"> Follow redirects</label>
+									</div>
+								</div>
+							</form>
+						</header>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div id="main">
+				<div class="container">
+					<div class="row">
+						<div class="3u 12u(mobile)">
+							<div class="reportSection">
+								<div class="reportTitle">Grand Totals</div>
+								<div class="reportBody">
+									<table class="reportTable">
+										<colgroup><col class="col1front50"><col class="col2front50"></colgroup>
+										<tbody>
+											<tr class="tableRow"><th class="tableLabel table_lightgreen">A+</th><td class="tableCellRecent text-right"><b>7,039,435</b></td></tr><tr class="tableRow"><th class="tableLabel table_green">A</th><td class="tableCellRecent text-right"><b>35,583,888</b></td></tr><tr class="tableRow"><th class="tableLabel table_yellow">B</th><td class="tableCellRecent text-right"><b>7,626,505</b></td></tr><tr class="tableRow"><th class="tableLabel table_yellow">C</th><td class="tableCellRecent text-right"><b>14,478,041</b></td></tr><tr class="tableRow"><th class="tableLabel table_orange">D</th><td class="tableCellRecent text-right"><b>35,516,414</b></td></tr><tr class="tableRow"><th class="tableLabel table_orange">E</th><td class="tableCellRecent text-right"><b>9,356,034</b></td></tr><tr class="tableRow"><th class="tableLabel table_red">F</th><td class="tableCellRecent text-right"><b>137,746,440</b></td></tr><tr class="tableRow"><th class="tableLabel table_grey">R</th><td class="tableCellRecent text-right"><b>47,653,559</b></td></tr><tr class="tableRow"><th class="tableLabel">Total</th><td class="tableCellRecent text-right"><b>295,000,316</b></td></tr>										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="3u 12u(mobile)">
+							<div class="reportSection">
+								<div class="reportTitle">Recent Scans</div>
+								<div class="reportBody">
+									<table class="reportTable">
+										<colgroup><col class="col1front"><col class="col2front"></colgroup>
+										<tbody>
+											<tr class="tableRow"><th class="tableLabel"><a href="index9bcf.html?q=https%3A%2F%2Fwww.platinumcrown.in%2Fblogs%2Ftop-banquet-hall-for-corporate-events-in-raj-nagar-extension-ghaziabad%2F">www.platinumcrown....</a></th><td class="tableCellRecent text-right table_orange">D</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index9f5b.html?q=https%3A%2F%2Fposteezy.com%2Fenter-future-relevance-learning-sap-btp-administration-admcld">posteezy.com</a></th><td class="tableCellRecent text-right table_orange">D</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index1891.html?q=https%3A%2F%2Fsecurityheaders.com%2F">securityheaders.co...</a></th><td class="tableCellRecent text-right table_lightgreen">A+</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index3f2f.html?q=https%3A%2F%2Frequest.insertdisc.online%2Flogin">request.insertdisc...</a></th><td class="tableCellRecent text-right table_lightgreen">A+</td></tr><tr class="tableRow"><th class="tableLabel"><a href="indexf5e9.html?q=https%3A%2F%2Fabc8a.blue%2F">abc8a.blue</a></th><td class="tableCellRecent text-right table_yellow">B</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index13dc.html?q=https%3A%2F%2Fwww.digwow.net%2Fpost%2F3817462590%2F12488%2F12488-005.pdf">www.digwow.net</a></th><td class="tableCellRecent text-right table_orange">D</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index9cb9.html?q=http%3A%2F%2Fkruga.net%2Fproxy.php%3Flink%3Dhttps%3A%2F%2Fslotscomment.com%2F">kruga.net</a></th><td class="tableCellRecent text-right table_orange">E</td></tr><tr class="tableRow"><th class="tableLabel"><a href="indexfd73.html?q=https%3A%2F%2Fbags-ua.com%2F">bags-ua.com</a></th><td class="tableCellRecent text-right table_green">A</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index1431.html?q=http%3A%2F%2Fgodgiven.nu%2Fcgi-bin%2Frefsweep.cgi%3Furl%3Dhttps%3A%2F%2Fhurstmodels.com%2F">godgiven.nu</a></th><td class="tableCellRecent text-right table_red">F</td></tr>										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="3u 12u(mobile)">
+							<div class="reportSection">
+								<div class="reportTitle">Hall of Fame</div>
+								<div class="reportBody">
+									<table class="reportTable">
+										<colgroup><col class="col1front"><col class="col2front"></colgroup>
+										<tbody>
+											<tr class="tableRow"><th class="tableLabel"><a href="index1891.html?q=https%3A%2F%2Fsecurityheaders.com%2F">securityheaders.co...</a></th><td class="tableCellRecent text-right table_lightgreen">A+</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index3f2f.html?q=https%3A%2F%2Frequest.insertdisc.online%2Flogin">request.insertdisc...</a></th><td class="tableCellRecent text-right table_lightgreen">A+</td></tr><tr class="tableRow"><th class="tableLabel"><a href="indexfd73.html?q=https%3A%2F%2Fbags-ua.com%2F">bags-ua.com</a></th><td class="tableCellRecent text-right table_green">A</td></tr><tr class="tableRow"><th class="tableLabel"><a href="indexa8b0.html?q=https%3A%2F%2Fwolfram-ua.com%2F">wolfram-ua.com</a></th><td class="tableCellRecent text-right table_green">A</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index8024.html?q=https%3A%2F%2Fhhnsystem.com%2F">hhnsystem.com</a></th><td class="tableCellRecent text-right table_lightgreen">A+</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index0e21.html?q=https%3A%2F%2Fwww.deviantart.com%2Fpepepainting%2Fart%2Fspongebob-pepe-painting-on-canvas-art-1023686925">www.deviantart.com</a></th><td class="tableCellRecent text-right table_green">A</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index7085.html?q=https%3A%2F%2Fhillsideprimarycare.com%2Fcheckin_test%2F">hillsideprimarycar...</a></th><td class="tableCellRecent text-right table_lightgreen">A+</td></tr><tr class="tableRow"><th class="tableLabel"><a href="indexd15c.html?q=https%3A%2F%2Fwww.test.francoisastruc.com%2F">www.test.francoisa...</a></th><td class="tableCellRecent text-right table_lightgreen">A+</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index864d.html?q=https%3A%2F%2Fwww.motifworks.com%2F">www.motifworks.com</a></th><td class="tableCellRecent text-right table_green">A</td></tr>										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="3u 12u(mobile)">
+							<div class="reportSection">
+								<div class="reportTitle">Hall of Shame</div>
+								<div class="reportBody">
+									<table class="reportTable">
+										<colgroup><col class="col1front"><col class="col2front"></colgroup>
+										<tbody>
+											<tr class="tableRow"><th class="tableLabel"><a href="indexbedb.html?q=https%3A%2F%2Feu.queenmobile.org%2F">eu.queenmobile.org</a></th><td class="tableCellRecent text-right table_red">F</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index1431.html?q=http%3A%2F%2Fgodgiven.nu%2Fcgi-bin%2Frefsweep.cgi%3Furl%3Dhttps%3A%2F%2Fhurstmodels.com%2F">godgiven.nu</a></th><td class="tableCellRecent text-right table_red">F</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index0c12.html?q=https%3A%2F%2Fwww.koltoztet.com%2Fforrica-bolsos-de-mujer-bolso-de-mano-elegante-bolso-tote-con-colgante-exquisito-se%C3%83%C2%B1ora-cuero-pu-bolso-bandolera-para-trabajar-compras-blanco">www.koltoztet.com</a></th><td class="tableCellRecent text-right table_red">F</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index0ef9.html?q=https%3A%2F%2Ffa.queenmobile.org%2F">fa.queenmobile.org</a></th><td class="tableCellRecent text-right table_red">F</td></tr><tr class="tableRow"><th class="tableLabel"><a href="indexd69c.html?q=https%3A%2F%2Fcreditcardbank.ru%2Fkaliningrad%2Fkreditnye-karty%2Fak-bars-bank-kreditnaja-karta-115-dnej-bez-procentov%2F">creditcardbank.ru</a></th><td class="tableCellRecent text-right table_red">F</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index7b50.html?q=http%3A%2F%2Fnoref.pl%2F1707390231%2F%3Fu%3Dhttps%3A%2F%2Fwww.syracuse-computer-repairs.com%2F">noref.pl</a></th><td class="tableCellRecent text-right table_red">F</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index39c0.html?q=https%3A%2F%2Fzh-cn.queenmobile.org%2F">zh-cn.queenmobile....</a></th><td class="tableCellRecent text-right table_red">F</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index1927.html?q=https%3A%2F%2Fdarktorrent.org%2Fengine%2Fdude%2Findex%2Fleech_out.php%3Fa%3Aahr0chm6ly9mywnoywljyxnpbm8ub3jnlw">darktorrent.org</a></th><td class="tableCellRecent text-right table_red">F</td></tr><tr class="tableRow"><th class="tableLabel"><a href="index9347.html?q=http%3A%2F%2Fweddingdress.blog%2Farticle%2Fview%2Ftrial-runs-the-importance-of-dress-fitting_14030.html">weddingdress.blog</a></th><td class="tableCellRecent text-right table_red">F</td></tr>										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+		<div id="copyright">
+	<div class="container">
+		<div class="row">
+			<div class="4u">
+				<span>A <a href="https://probely.com/" target="_blank">probely.com</a> project - <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en_GB" target="_blank">CC-BY-SA 4.0</a></span>
+			</div>
+			<div class="4u" id="sponsor-footer">
+				<span>Powered by <a href="https://prbly.us/3Oed4l7" target="_blank">Probely</a> - A Snyk Business </span>
+			</div>
+			<div class="4u">
+				<ul class="social">
+					<li><a href="https://twitter.com/securityheaders" class="icon fa-twitter"><span>Twitter</span></a></li>
+					<li><a href="https://www.facebook.com/secheaders/" class="icon fa-facebook"><span>Facebook</span></a></li>
+					<li><a href="cdn-cgi/l/email-protection.html#f891969e97b88b9d9b8d8a918c81909d999c9d8a8bd69b9795" class="icon fa-envelope"><span>Email</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>		<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/scan.js" type="text/javascript"></script>
+	<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8fc132ad182391b2","version":"2024.10.5","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"10a86e2d27a44434b7cd23a115b108fe","b":1}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from securityheaders.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Jan 2025 07:15:48 GMT -->
+</html>
