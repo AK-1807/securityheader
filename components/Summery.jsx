@@ -1,8 +1,10 @@
 import React from "react";
+import Grade from "./Grade";
+import Advance from "./Advance";
 
 export default function Summary({site, headers}) {
   let headersData = headers
-    console.log(headersData)
+    
 
   if (!headersData) return <div>Loading...</div>;
 
@@ -16,9 +18,7 @@ export default function Summary({site, headers}) {
       
           <div className="w-full sm:w-1/4 p-4">
             <div className="score">
-              <div className="score_yellow bg-yellow-300 h-[130px rounded-s p-4 flex justify-center items-center">
-                <span className="text-xl font-bold">{headersData?.headers["Content-Security-Policy"] === "Present" ? "A" : "C"}</span>
-              </div>
+                <Grade headers={headersData?.evaluation}/>
             </div>
           </div>
 
@@ -80,18 +80,7 @@ export default function Summary({site, headers}) {
                 <tr>
                   <th className="text-left text-lg font-medium text-gray-700">Advanced:</th>
                   <td>
-                    <div className="flex items-center space-x-4">
-                      <span className="text-gray-600">
-                        Not bad… Maybe you should perform a deeper security analysis of your website and APIs:
-                      </span>
-                      {/* <a
-                        href="https://probely.com/sh?utm_campaign=Security%20Headers&utm_source=Security%20Headers&utm_medium=Display&utm_content=C"
-                        target="_blank"
-                        className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
-                      >
-                        Try Now
-                      </a> */}
-                    </div>
+                    <Advance headers={headersData?.evaluation}/>
                   </td>
                 </tr>
               </tbody>
