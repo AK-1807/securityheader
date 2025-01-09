@@ -4,7 +4,7 @@ const evaluateHeaders = (headers) => {
   const results = {};
 
   // Example checks for common security headers
-  results['Strict-Transport-Security'] = headers['strict-transport-security'] ? 'Present' : 'Missing';
+  results['Strict-Transport-Security'] = headers['strict-transport-security'] ? (headers['strict-transport-security'].includes('max-age=31536000') ? 'Present' : 'low') : 'Missing';
   results['X-Content-Type-Options'] = headers['x-content-type-options'].includes('nosniff') ? 'Present' : 'Missing';
   results['X-Frame-Options'] = headers['x-frame-options'] ? 'Present' : 'Missing';
   results['Content-Security-Policy'] = headers['content-security-policy'] ? 'Present' : 'Missing';

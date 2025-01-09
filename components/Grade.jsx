@@ -15,39 +15,31 @@ export default function Grade({headers}) {
             count +=1
         }
     })}
-    if((headers["Strict-Transport-Security"] == "Present" && headers["Content-Security-Policy"] == "Present") && count >= (headerslength-2)){
-        // setGrade("A")
-        // setColour("bg-[#2b9100]")
-        colour = "bg-[#2b9100]"
+    if((headers["Strict-Transport-Security"] == "Present" && headers["Content-Security-Policy"] == "Present") && count >= (headerslength-3)){
         grade = "A"
-    }else if((headers["Strict-Transport-Security"] == "Present" && headers["Content-Security-Policy"] != "Present") && count >= (headerslength-2)){
-        // setGrade("B")
-        // setColour("bg-[#acec91]")
-        colour = "bg-[#acec91]"
+        colour = "bg-[#2b9100]"
+    }else if((headers["Strict-Transport-Security"] == "Present" || headers["Content-Security-Policy"] == "Present") && count >= (headerslength-3)){
         grade = "B"
-    } else if((headers["Strict-Transport-Security"] == "Present" && headers["Content-Security-Policy"] != "Present" )&& count <= (headerslength-4)){
-        // setGrade("C")
-        // setColour("bg-[#acec91]")
-        colour = "bg-[#ffa500]"
+        colour = "bg-[#acec91]"
+    }else if((headers["Strict-Transport-Security"] == "Present" || headers["Content-Security-Policy"] == "Present") && (count <= (headerslength-2) && count > (headerslength-4))){
         grade = "C"
-    }
-    else if((headers["Strict-Transport-Security"] != "Present" && headers["Content-Security-Policy"] != "Present") && count >= (headerslength-2)){
-        // setGrade("C")
-        // setColour("bg-[#ffa500]")
         colour = "bg-[#ffa500]"
+    } else if((headers["Strict-Transport-Security"] == "Present" || headers["Content-Security-Policy"] == "Present" )&& (count <= (headerslength-2) && count >= (headerslength-4))){
+      grade = "C"
+        colour = "bg-[#ffa500]"
+    }else if((headers["Strict-Transport-Security"] == "low" || headers["Content-Security-Policy"] == "Present") && (count <= (headerslength-2) && count > (headerslength-4))){
         grade = "C"
+        colour = "bg-[#ffa500]"
     }
-    else if((headers["Strict-Transport-Security"] != "Present" && headers["Content-Security-Policy"] != "Present") && count >= (headerslength-2)){
-        // setGrade("D")
-        // setColour("bg-[#e56d22]")
+    else if((headers["Strict-Transport-Security"] == "Present" || headers["Content-Security-Policy"] == "Present") && count <= (headerslength-4)){
+      grade = "D"
         colour = "bg-[#e56d22]"
-        grade = "D"
+
     }
     else if((headers["Strict-Transport-Security"] != "Present" && headers["Content-Security-Policy"] != "Present") && count < (headerslength-4)){
-        // setGrade("D")
-        // setColour("bg-[#db1e1e]")
+     grade = "D"
         colour = "bg-[#db1e1e]"
-        grade = "D"
+        
     }
    
   return (

@@ -19,21 +19,25 @@ export default function Advance({headers}) {
         grade = "A"
         colour = "bg-[#2b9100]"
         text = "Great grade! Perform a deeper security analysis of your website and APIs:"
-    }else if((headers["Strict-Transport-Security"] == "Present" && headers["Content-Security-Policy"] != "Present") && count >= (headerslength-2)){
+    }else if((headers["Strict-Transport-Security"] == "Present" || headers["Content-Security-Policy"] == "Present") && count >= (headerslength-2)){
         grade = "B"
         colour = "bg-[#acec91]"
         text = "Good grade! Perform a deeper security analysis of your website and APIs:"
-    } else if((headers["Strict-Transport-Security"] == "Present" && headers["Content-Security-Policy"] != "Present" )&& count <= (headerslength-4)){
+    }else if((headers["Strict-Transport-Security"] == "Present" || headers["Content-Security-Policy"] == "Present") && (count <= (headerslength-2) && count > (headerslength-4))){
+        grade = "C"
+        colour = "bg-[#ffa500]"
+        text = "Not bad… Maybe you should perform a deeper security analysis of your website and APIs:"
+    }
+    else if((headers["Strict-Transport-Security"] == "low" || headers["Content-Security-Policy"] == "Present") && (count <= (headerslength-2) && count >= (headerslength-4))){
+        grade = "C"
+        colour = "bg-[#ffa500]"
+        text = "Not bad… Maybe you should perform a deeper security analysis of your website and APIs:"
+    } else if((headers["Strict-Transport-Security"] == "Present" || headers["Content-Security-Policy"] == "Present" )&& (count <= (headerslength-2) && count > (headerslength-4))){
       grade = "C"
         colour = "bg-[#ffa500]"
         text = "Not bad… Maybe you should perform a deeper security analysis of your website and APIs:"
     }
-    else if((headers["Strict-Transport-Security"] != "Present" && headers["Content-Security-Policy"] != "Present") && count >= (headerslength-2)){
-       grade = "C"
-        colour = "bg-[#ffa500]"
-        text = "Not bad… Maybe you should perform a deeper security analysis of your website and APIs:"
-    }
-    else if((headers["Strict-Transport-Security"] != "Present" && headers["Content-Security-Policy"] != "Present") && count >= (headerslength-2)){
+    else if((headers["Strict-Transport-Security"] == "Present" || headers["Content-Security-Policy"] == "Present") && count <= (headerslength-4)){
       grade = "D"
         colour = "bg-[#e56d22]"
         text = "Your site could be at risk, let’s perform a deeper security analysis of your site and APIs:"

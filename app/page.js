@@ -23,7 +23,7 @@ export default function Home() {
         }
       );
       const data = await response.json();
-
+      
       if (data.error) {
         setError(data.error);
       } else {
