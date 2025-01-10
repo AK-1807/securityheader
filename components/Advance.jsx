@@ -46,6 +46,10 @@ export default function Advance({headers}) {
      grade = "D"
         colour = "bg-[#db1e1e]"
         text = "Your site could be at risk, let’s perform a deeper security analysis of your site and APIs:"
+    }else{
+        grade = "D"
+        colour = "bg-[#db1e1e]"
+        text = "Your site could be at risk, let’s perform a deeper security analysis of your site and APIs:"
     }
    
   return (

@@ -40,7 +40,11 @@ export default function Grade({headers}) {
      grade = "D"
         colour = "bg-[#db1e1e]"
         
-    }
+    }else {
+        grade = "D"
+           colour = "bg-[#db1e1e]"
+           
+       }
    
   return (
     <div className={`${colour} h-[130px] rounded-s p-4 flex justify-center items-center`}>
